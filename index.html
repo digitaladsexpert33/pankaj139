@@ -1,147 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join TRADE WITH SUNIL</title>
-  <meta name="description" content="Join our high-accuracy stock/forex tips Telegram channel. Limited spots. 100% free demo.">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      animation: fadeIn 1s ease-in;
-    }
+<style>
+  :root {
+    --bg: radial-gradient(circle at 10% 0%, #020617, #020617 55%, #000000 100%);
+    --accent1: #00c8ff;
+    --accent2: #0078ff;
+    --text: #ffffff;
+    --muted: #b8c3d6;
+    --card: rgba(15,23,42,0.96);
+    --glow: 0 0 18px rgba(0,160,255,0.7);
+    --danger: #ff4444;
+  }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    .container {
-      background: #1a1a1a;
-      padding: 30px 20px;
-      max-width: 420px;
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.2);
-      text-align: center;
-      animation: fadeUp 1s ease-out;
-    }
+  body {
+    font-family: "Poppins", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1px 10px 10px;
+  }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  .wrap {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    background: var(--card);
+    padding: 18px 16px 16px;
+    border-radius: 22px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.85);
+    border: 1px solid rgba(148,163,184,0.4);
+  }
 
-    .logo {
-      width: 100px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      border: 2px solid #00ffaa;
-    }
+  .avatar-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 
-    h1 {
-      font-size: 1.6rem;
-      color: #00ffaa;
-      margin-bottom: 10px;
-    }
+  .avatar-ring {
+    padding: 3px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(56,189,248,0.8), rgba(37,99,235,0.4));
+    box-shadow: 0 10px 30px rgba(15,23,42,0.9), var(--glow);
+  }
 
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #00ffaa;
-      margin: 20px 0 10px;
-    }
+  img.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 21px;
+    object-fit: cover;
+  }
 
-    .benefit-text {
-      font-size: 0.95rem;
-      margin: 6px 0;
-      color: #ddd;
-    }
+  h1 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 12px;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    text-align: center;
+  }
 
-    p {
-      font-size: 1rem;
-      margin: 10px 0 20px;
-    }
+  .cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    padding: 13px 18px;
+    border-radius: 999px;
+    color: #011016;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 16px 0;
+  }
 
-    .cta-btn {
-      background-color: #00ffaa;
-      color: #000;
-      border: none;
-      padding: 14px 28px;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      animation: pulse 1.6s infinite;
-      transition: transform 0.3s ease;
-      margin-top: 20px;
-    }
+  .emoji-text p {
+    font-size: 0.78rem;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: rgba(15,23,42,0.95);
+    border: 1px solid rgba(148,163,184,0.4);
+    margin-bottom: 6px;
+  }
 
-    .cta-btn:hover {
-      transform: scale(1.05);
-    }
+  .limited-text {
+    color: var(--danger);
+    font-size: 0.74rem;
+    text-align: center;
+    margin-top: 6px;
+  }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 255, 170, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(0, 255, 170, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 255, 170, 0); }
-    }
+  footer {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
 
-    .countdown {
-      font-size: 0.95rem;
-      margin-top: 15px;
-      color: #ffcc00;
-    }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+    margin: 0 6px;
+  }
 
-    .disclaimer {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 20px;
-    }
-  </style>
+  /* NetAD Expert Highlight */
+  .ads-managed {
+    margin: 12px auto;
+    padding: 10px 14px;
+    border-radius: 14px;
+    max-width: 280px;
+    background: linear-gradient(135deg, rgba(0,200,255,0.15), rgba(0,120,255,0.15));
+    border: 1px solid rgba(56,189,248,0.5);
+    box-shadow: 0 0 18px rgba(0,160,255,0.25);
+  }
+
+  .ads-managed span {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .ads-managed a {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+</style>
+
+   
+
 </head>
+
 <body>
-  <div class="container">
-    <img src="logo.jpg" alt="Telegram Logo" class="logo" />
-    <h1>Join TRADE WITH SUNIL</h1>
-    <p>🚀 Daily Accurate Calls<br>📈 Free Demo Access<br>🔐 Limited Members Only</p>
 
-    <div class="section-title">Master TRADING STRATEGIES</div>
-    <div class="benefit-text">Learn the TECHNIQUES & INTRADAY STOCK TIPS to Protect your Capital</div>
-    <div class="benefit-text">eLearn the PROCEDURES to Earn More while Investing Lesser Capital</div>
+  <div class="wrap">
+    <div class="avatar-box">
+      <div class="avatar-ring">
+        <img class="avatar" src="https://edu.primereachads.live/wp-content/uploads/2025/12/ChatGPT-Image-Oct-8-2025-at-10_42_07-AM.jpg" alt="Pankaj Bhardwaj">
+      </div>
+      <h1>👑 Pankaj Bhardwaj 👑</h1>
+    </div>
 
-    <a href="https://t.me/YourChannelUsername" target="_blank">
-      <button class="cta-btn">Join Free Channel</button>
+    <a class="cta" href="https://telegram.me/+mB_idf-q5_4xNGNl" target="_blank" rel="noopener nofollow">
+      🚀 Join Now Our Community
     </a>
 
-    <div class="countdown">Redirecting in <span id="timer">10</span> seconds...</div>
+    <div class="emoji-text">
+      <p>⚡ Learn Trades With Expert Explanation</p>
+      <p>📊 Daily Market Breakdown & Support</p>
+      <p>🎯 Smart Entry — Rule Based Strategy</p>
+      <p>💡 Learn How Trades Are Planned</p>
+      <p>📚 0 to Pro Trading Guidance!</p>
+    </div>
 
-    <p class="disclaimer">For educational purposes only. Not SEBI registered. DYOR.</p>
+    <a class="cta" href="https://t.me/+mB_idf-q5_4xNGNl" target="_blank" rel="noopener nofollow">
+      🚀 Join Now Our Community
+    </a>
+
+    <div class="limited-text">⏰ Don’t Miss Out — Active Members Joining Fast!</div>
   </div>
 
-  <script>
-    let countdown = 10;
-    const timerEl = document.getElementById("timer");
-    const redirectUrl = "https://t.me/YourChannelUsername";
+  <footer>
+    
 
-    const interval = setInterval(() => {
-      countdown--;
-      timerEl.textContent = countdown;
-      if (countdown === 0) {
-        clearInterval(interval);
-        window.location.href = redirectUrl;
-      }
-    }, 1000);
-  </script>
+    <a href="https://elitepips.online/terms/" target="_blank">Terms</a> |
+    <a href="https://elitepips.online/privacy/" target="_blank">Privacy</a> |
+    <a href="https://elitepips.online/disclaimer/" target="_blank">Disclaimer</a>
+
+    <br><br>
+    This site is not part of Facebook™️ or endorsed by Facebook™️.
+  </footer>
+
 </body>
 </html>
